@@ -13,5 +13,22 @@ namespace RankedChoiceBookClub.Models
         public DateTime Date { get; set; }
         public Book Book { get; set; }
         public List<BookVote> BookVotes { get; set; }
+
+
+        public Book FindBookVoteWinner()
+        {
+            // <book id, vote count>
+            Dictionary<int, int> VoteTally = new Dictionary<int, int>();
+            bool winnerFound = false;
+            int choicePosition = 1;
+            while (!winnerFound)
+            {
+                foreach (var vote in BookVotes)
+                {
+                    
+                }
+            }
+            return new Book();
+        }
     }
 }

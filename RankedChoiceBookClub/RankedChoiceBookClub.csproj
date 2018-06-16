@@ -249,7 +249,7 @@
     <Content Include="Views\Authors\Details.cshtml" />
     <Content Include="Views\Authors\Edit.cshtml" />
     <Content Include="Views\Authors\Index.cshtml" />
-    <Content Include="Views\BookClubs\Create.cshtml" />
+    <Content Include="Views\BookClubs\New.cshtml" />
     <Content Include="Views\BookClubs\Delete.cshtml" />
     <Content Include="Views\BookClubs\Details.cshtml" />
     <Content Include="Views\BookClubs\Edit.cshtml" />

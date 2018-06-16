@@ -13,4 +13,6 @@ namespace RankedChoiceBookClub.Models
         public Book Choice2 { get; set; }
         public Book Choice3 { get; set; }
     }
+
+    
 }

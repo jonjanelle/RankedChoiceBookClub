@@ -36,7 +36,7 @@ namespace RankedChoiceBookClub.Controllers
             return View(bookClub);
         }
 
-        // GET: BookClubs/Create
+        // GET: BookClubs/New
         public ActionResult New()
         {
             return View();
