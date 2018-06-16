@@ -1,14 +1,14 @@
-﻿@model IEnumerable<BookClub.Models.BookClub>
+﻿@model IEnumerable<RankedChoiceBookClub.Models.BookClub>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Book Club Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create Book Club", "Create", new { }, new { @class = "btn btn-sm btn-success" })
 </p>
 <table class="table">
     <tr>

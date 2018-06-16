@@ -37,7 +37,7 @@ namespace RankedChoiceBookClub.Controllers
         }
 
         // GET: BookClubs/Create
-        public ActionResult Create()
+        public ActionResult New()
         {
             return View();
         }
@@ -57,7 +57,7 @@ namespace RankedChoiceBookClub.Controllers
             return View(bookClub);
         }
 
-        // GET: BookClubs/Edit/5
+        // GET: BookClubs/Edit/{id}
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -72,7 +72,7 @@ namespace RankedChoiceBookClub.Controllers
             return View(bookClub);
         }
 
-        // POST: BookClubs/Edit/5
+        // POST: BookClubs/Edit/{id}
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Name,AccessCode,Description")] BookClub bookClub)

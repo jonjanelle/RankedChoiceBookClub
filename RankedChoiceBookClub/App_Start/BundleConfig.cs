@@ -24,8 +24,12 @@ namespace RankedChoiceBookClub
                       "~/Scripts/bootstrap.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/vendor/bootstrap.min.css",
-                      "~/Content/css/Site.css"));
+                      "~/Content/css/Site.css", 
+                      "~/Content/css/main.css"));
+
+            bundles.Add(new StyleBundle("~/Content/vendor").Include(
+                    "~/Content/vendor/bootstrap.min.css",
+                    "~/Content/font-awesome.css"));
         }
     }
 }

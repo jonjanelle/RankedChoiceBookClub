@@ -1,0 +1,13 @@
+﻿.reqd {
+  color: #A00000; }
+
+.white-fg {
+  color: white !important; }
+
+.white-bg {
+  background: white; }
+
+.white-block {
+  background: white;
+  padding: 1em; }
+

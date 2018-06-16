@@ -1,0 +1,42 @@
+﻿$richred: #A00000;
+$orange: #F54927;
+$green: #006400;
+$off-white: #FBFBFB;
+$lightest-gray: #F7F7F7;
+$lighter-gray: #F2F2F2;
+$light-gray: #DDDDDD;
+
+@mixin light_shadow {
+    -webkit-box-shadow: 1px solid rgba(200,200,200,.4);
+    -moz-box-shadow: 1px solid rgba(200,200,200,.4);
+    box-shadow: 1px 0px 10px 1px rgba(200,200,200,.4);
+}
+
+@mixin light_hover_box {
+    border-radius: 3px;
+    transition: .25s ease-in-out;
+    @include light_shadow;
+
+    &:hover {
+        -webkit-box-shadow: 1px 0px 10px 1px rgba(175,175,175,.65);
+        -moz-box-shadow: 1px 0px 10px 1px rgba(175,175,175,.65);
+        box-shadow: 1px 0px 10px 1px rgba(175,175,175,.65);
+    }
+}
+
+.reqd {
+    color: $richred;
+}
+
+.white-fg {
+    color: white !important;
+}
+
+.white-bg {
+    background: white;
+}
+
+.white-block {
+    background: white;
+    padding: 1em;
+}

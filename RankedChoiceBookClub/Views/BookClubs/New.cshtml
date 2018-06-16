@@ -1,14 +1,14 @@
 ﻿@model RankedChoiceBookClub.Models.BookClub
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="my-2">
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
-<h2>Edit Book Club</h2>
+<h2>Create New Book Club</h2>
 
 @Html.Partial("_BookClubForm", Model)
 
+<div>
+ @Html.ActionLink("Back to List", "Index")
+</div>

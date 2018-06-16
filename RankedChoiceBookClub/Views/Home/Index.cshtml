@@ -3,9 +3,25 @@
 }
 
 <header class="jumbotron my-4 text-center">
-    <h1 class="display-3">Welcome to Book Club!</h1>
+    <h1 class="display-3 text-xl"><strong>Welcome to Book Club!</strong></h1>
     <p class="lead">Coordinate meetings and choose books with ranked-choice voting system</p>
-    <a href="#" class="btn btn-primary btn-lg">Start a new club</a>
+    <i class="fa fa-book text-huge"></i>
+    <div class="row">
+        <div class="col-12 my-4">
+            <form class="form-inline justify-content-center">
+                <label class="sr-only" for="inlineFormInputName2">Club Code</label>
+                <input type="text" class="form-control mb-2 mr-2 mb-sm-0 pl-1 bg-white" id="inlineFormInputName2" placeholder="Enter Club Code">
+                <button type="submit" class="btn btn-primary">Go!</button>
+            </form>
+        </div>
+    </div>
+    <hr />
+    <div class="row text-center">
+        <div class="col-12"><strong>Not part of a club yet?</strong></div>
+        <div class="col-12">
+        @Html.ActionLink("Create a new book club", "New", "BookClubs", new { @class="btn btn-sm btn-info"})
+        </div>
+    </div>
 </header>
 
 <div class="row">
@@ -16,7 +32,6 @@
             <li>@Html.ActionLink("Book Clubs", "Index", "BookClubs")</li>
             <li>@Html.ActionLink("Book Club Meetings", "Index", "BookClubMeetings")</li>
             <li>@Html.ActionLink("Book Votes", "Index", "BookVotes")</li>
-            <li></li>
         </ul>
     </div>
 </div>
