@@ -23,9 +23,12 @@ namespace RankedChoiceBookClub
                       "~/Scripts/bootstrap.bundle.min.js",
                       "~/Scripts/bootstrap.min.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/Scripts/angular.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/css/Site.css", 
-                      "~/Content/css/main.css"));
+                      "~/Content/css/compiled/main.css"));
 
             bundles.Add(new StyleBundle("~/Content/vendor").Include(
                     "~/Content/vendor/bootstrap.min.css",

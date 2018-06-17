@@ -12,6 +12,7 @@ namespace RankedChoiceBookClub.Models
         public Location Location { get; set; }
         public DateTime Date { get; set; }
         public Book Book { get; set; }
+        public List<BookNomination> BookNominations { get; set; }
         public List<BookVote> BookVotes { get; set; }
 
 

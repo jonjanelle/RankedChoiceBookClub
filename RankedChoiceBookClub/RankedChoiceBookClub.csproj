@@ -171,20 +171,26 @@
     <Compile Include="Migrations\201806161820261_InitialModel.Designer.cs">
       <DependentUpon>201806161820261_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806171729278_BookNomination.cs" />
+    <Compile Include="Migrations\201806171729278_BookNomination.Designer.cs">
+      <DependentUpon>201806171729278_BookNomination.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookClub.cs" />
     <Compile Include="Models\BookClubMeeting.cs" />
+    <Compile Include="Models\BookNomination.cs" />
     <Compile Include="Models\BookVote.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\RankedChoiceBookClubContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BookClubMeetingFormVM.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\main.css" />
-    <Content Include="Content\css\main.min.css">
+    <Content Include="Content\css\compiled\main.css" />
+    <Content Include="Content\css\compiled\main.min.css">
       <DependentUpon>main.css</DependentUpon>
     </Content>
     <Content Include="Content\font-awesome.css" />
@@ -210,6 +216,7 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -249,7 +256,7 @@
     <Content Include="Views\Authors\Details.cshtml" />
     <Content Include="Views\Authors\Edit.cshtml" />
     <Content Include="Views\Authors\Index.cshtml" />
-    <Content Include="Views\BookClubs\New.cshtml" />
+    <Content Include="Views\BookClubs\Create.cshtml" />
     <Content Include="Views\BookClubs\Delete.cshtml" />
     <Content Include="Views\BookClubs\Details.cshtml" />
     <Content Include="Views\BookClubs\Edit.cshtml" />
@@ -267,6 +274,8 @@
     <Content Include="Views\BookClubs\_BookClubForm.cshtml" />
     <Content Include="Views\Books\_BookForm.cshtml" />
     <Content Include="Views\BookVotes\_BookVoteForm.cshtml" />
+    <Content Include="Views\BookClubMeetings\_BookClubMeetingForm.cshtml" />
+    <Content Include="Views\Authors\_AuthorForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -286,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806161820261_InitialModel.resx">
       <DependentUpon>201806161820261_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806171729278_BookNomination.resx">
+      <DependentUpon>201806171729278_BookNomination.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

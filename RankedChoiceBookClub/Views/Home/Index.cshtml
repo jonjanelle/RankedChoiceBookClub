@@ -2,15 +2,15 @@
     ViewBag.Title = "Home Page";
 }
 
-<header class="jumbotron my-4 text-center">
+<header class="jumbotron my-4 text-center light-box-shadow">
     <h1 class="display-3 text-xl"><strong>Welcome to Book Club!</strong></h1>
-    <p class="lead">Coordinate meetings and choose books with ranked-choice voting system</p>
+    <p class="lead">Coordinate meetings and choose books ranked-choice voting</p>
     <i class="fa fa-book text-huge"></i>
     <div class="row">
         <div class="col-12 my-4">
             <form class="form-inline justify-content-center">
                 <label class="sr-only" for="inlineFormInputName2">Club Code</label>
-                <input type="text" class="form-control mb-2 mr-2 mb-sm-0 pl-1 bg-white" id="inlineFormInputName2" placeholder="Enter Club Code">
+                <input type="text" class="mb-2 mr-2 mb-sm-0 pl-1 bg-white" id="inlineFormInputName2" placeholder="Enter Club Code">
                 <button type="submit" class="btn btn-primary">Go!</button>
             </form>
         </div>
@@ -19,7 +19,7 @@
     <div class="row text-center">
         <div class="col-12"><strong>Not part of a club yet?</strong></div>
         <div class="col-12">
-        @Html.ActionLink("Create a new book club", "New", "BookClubs", new { @class="btn btn-sm btn-info"})
+            @Html.ActionLink("Create a Book Club", "Create", "BookClubs", new { }, new { @class="btn btn-sm btn-info"})
         </div>
     </div>
 </header>

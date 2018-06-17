@@ -6,10 +6,10 @@ $lightest-gray: #F7F7F7;
 $lighter-gray: #F2F2F2;
 $light-gray: #DDDDDD;
 
-@mixin light_shadow {
-    -webkit-box-shadow: 1px solid rgba(200,200,200,.4);
-    -moz-box-shadow: 1px solid rgba(200,200,200,.4);
-    box-shadow: 1px 0px 10px 1px rgba(200,200,200,.4);
+@mixin light_box_shadow {
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
 }
 
 @mixin light_hover_box {
@@ -37,6 +37,9 @@ $light-gray: #DDDDDD;
 }
 
 .white-block {
+    @include light_box_shadow;
     background: white;
     padding: 1em;
+    border-radius: 3px;
 }
+
