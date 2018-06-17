@@ -8,8 +8,9 @@ namespace RankedChoiceBookClub.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string errorMessage)
         {
+            ViewBag.errorMessage = errorMessage;
             return View();
         }
 

@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Authors Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add Author", "Create", new { }, new { @class="btn btn-sm btn-success"})
 </p>
 <div class="table-responsive">
 <table class="table table-bordered light-box-shadow">

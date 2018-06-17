@@ -21,19 +21,41 @@ namespace RankedChoiceBookClub.Controllers
             return View(db.BookClubs.ToList());
         }
 
-        // GET: BookClubs/Details/5
+        // GET: BookClubs/Details/{id or accesscode)
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BookClub bookClub = db.BookClubs.Find(id);
+
+            BookClub  bookClub = db.BookClubs.Find(id);
+   
             if (bookClub == null)
             {
                 return HttpNotFound();
             }
             return View(bookClub);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ProcessClubCode(string accessCode)
+        {
+            BookClub bookClub = null; ;
+            if (accessCode == null)
+            {
+                return RedirectToAction("Index", "Home", new { errorMessage = "Invalid Access Code" });
+            }
+            else
+            {
+                bookClub = db.BookClubs.SingleOrDefault(b => b.AccessCode == accessCode);
+                if (bookClub == null)
+                {
+                    return RedirectToAction("Index", "Home", new { errorMessage = "Invalid Access Code" });
+                }
+            }
+            return RedirectToAction("Details", new { Id = bookClub.Id });
         }
 
         // GET: BookClubs/Create
@@ -48,7 +70,7 @@ namespace RankedChoiceBookClub.Controllers
         public ActionResult Create([Bind(Include = "Id,Name,AccessCode,Description")] BookClub bookClub)
         {
             if (ModelState.IsValid)
-            {
+            {  
                 db.BookClubs.Add(bookClub);
                 db.SaveChanges();
                 return RedirectToAction("Index");

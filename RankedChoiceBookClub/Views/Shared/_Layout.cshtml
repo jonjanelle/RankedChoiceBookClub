@@ -18,7 +18,14 @@
 <body class="bg-lightgray">
     <div id="wrapper">
         @Html.Partial("_Navbar")
-        <div class="container my-4"">
+        <div class="container my-4">
+            @if (ViewBag.errorMessage != null)
+            {
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    @ViewBag.errorMessage
+                </div>
+            }
             @RenderBody()
         </div>
         <div id="push"></div>

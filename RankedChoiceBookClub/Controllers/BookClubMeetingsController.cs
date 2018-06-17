@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using RankedChoiceBookClub.Models;
-
+using RankedChoiceBookClub.ViewModels;
 namespace RankedChoiceBookClub.Controllers
 {
     public class BookClubMeetingsController : Controller
@@ -36,9 +36,15 @@ namespace RankedChoiceBookClub.Controllers
         }
 
         // GET: BookClubMeetings/Create
-        public ActionResult Create()
-        {
-            return View();
+        public ViewResult Create()
+        { 
+            BookClubMeetingFormVM NewMeetingVM = new BookClubMeetingFormVM();
+            NewMeetingVM.BookClubMeeting = new BookClubMeeting();
+            //ToList to immediate execute the query rather than waiting to perform in view/viewmodel
+            NewMeetingVM.BookOptions = db.Books.ToList();
+            //Eventually a book club id should be a required arugment, only should be allowed to access this action if administrator of book club
+            NewMeetingVM.BookClubs = db.BookClubs.ToList();
+            return View(NewMeetingVM);
         }
 
         // POST: BookClubMeetings/Create
@@ -52,7 +58,7 @@ namespace RankedChoiceBookClub.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+    
             return View(bookClubMeeting);
         }
 
